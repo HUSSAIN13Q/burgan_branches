@@ -1,0 +1,41 @@
+name: burgan_branches
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.5.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  go_router: ^14.3.0
+  flutter_native_splash: ^2.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - asset/image/  
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: asset/image/burgan.jpg  
+  branding: asset/image/burgan.jpg
+  # color_dark: "#121212"
+  # image_dark: asset/image/burgan.jpg
+  # branding_dark: asset/image/burgan.jpg
+
+  android_12:
+    image: asset/image/burgan.jpg
+    icon_background_color: "#ffffff"
+    image_dark: asset/image/burgan.jpg
+    # icon_background_color_dark: "#121212"
+    # branding: asset/image/burgan.jpg
+    # branding_dark: asset/image/burgan.jpg
+
+  web: false
