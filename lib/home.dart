@@ -14,7 +14,6 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Image with rounded corners
             Center(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
@@ -26,9 +25,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 20), // Space between image and text
-
-            // "About Burgan" Heading
+            const SizedBox(height: 20),
             const Center(
               child: Text(
                 "About Burgan",
@@ -39,9 +36,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 10), // Space between heading and description
-
-            // Description Text
+            const SizedBox(height: 10),
             const Text(
               "Burgan Bank, a Kuwait-based conventional bank, is a leading financial services institution in the MENAT region. Established in 1977, the bank’s key focus is corporate clients. Recently, it has significantly diversified its offering to retail and private banking customers.",
               style: TextStyle(
@@ -51,19 +46,18 @@ class HomePage extends StatelessWidget {
               ),
               textAlign: TextAlign.justify,
             ),
-            const SizedBox(height: 20), // Space between description and button
-
-            // Explore Branches Button
+            const SizedBox(height: 20),
             Center(
               child: ElevatedButton(
                 onPressed: () {
                   GoRouter.of(context).push("/branch");
                 },
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 40),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 15, horizontal: 40),
                   backgroundColor: Colors.black,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30), // Rounded corners
+                    borderRadius: BorderRadius.circular(30),
                   ),
                 ),
                 child: const Text(

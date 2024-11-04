@@ -16,31 +16,27 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    // Step 4
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-       routerConfig: _router,
-
+      routerConfig: _router,
     );
-    
   }
-  final _router = GoRouter(
-    routes: [
-      GoRoute(
-        path: '/',
-        builder: (context, state) =>HomePage(),
-      ),
-      GoRoute(
-        path: '/branch',
-        builder: (context, state) => BurganBankBranches(),
-      ),
-      GoRoute(
-        path: '/branch:name',
-        builder: (context, state) { final branch = state.extra as Branch;
+
+  final _router = GoRouter(routes: [
+    GoRoute(
+      path: '/',
+      builder: (context, state) => HomePage(),
+    ),
+    GoRoute(
+      path: '/branch',
+      builder: (context, state) => BurganBankBranches(),
+    ),
+    GoRoute(
+      path: '/branch:name',
+      builder: (context, state) {
+        final branch = state.extra as Branch;
         return BranchDetailPage(branch: branch);
-        },
-      )
-    ]
-  );
+      },
+    )
+  ]);
 }
